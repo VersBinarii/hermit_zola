@@ -1,0 +1,31 @@
+name = "Hermit_Zola"
+description = "Minimal Zola theme"
+license = "MIT"
+homepage = "https://github.com/VersBinarii/hermit_zola"
+min_version = "0.4.0"
+demo = "https://versbinarii.gitlab.io/blog/"
+
+[extra]
+home_subtitle = "Some profound and catchy statement"
+
+footer_copyright = ''
+
+hermit_menu = [
+    { link = "/posts", name = "Posts" },
+    { link = "/about", name = "About" }
+]
+
+hermit_social = [
+    { name = "twitter", link = "https://twitter.com" },
+    { name = "github", link = "https://github.com" },
+    { name = "email", link = "mailto:name@domain.com" }
+]
+
+[author]
+name = "VersBinarii"
+homepage = "https://versbinarii.gitlab.io/blog/"
+repo = "https://github.com/VersBinarii/hermit_zola"
+
+[original]
+author =  "Track3"
+repo = "https://github.com/Track3/hermit"

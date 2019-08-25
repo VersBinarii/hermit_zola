@@ -1,5 +1,5 @@
 # Base URL of the site, the only required config argument
-base_url = "https://example.com"
+base_url = "https://example.com/blog"
 
 # Used in RSS by default
 title = "Hermit Zola"

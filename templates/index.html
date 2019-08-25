@@ -39,7 +39,7 @@
 		{% block main %}
 		<nav id="home-nav" class="site-nav">
 		  {% for s in config.extra.hermit_menu %}
-		  <a href="{{s.link}}">{{s.name}}</a>
+		  <a href="{{config.base_url ~ s.link}}">{{s.name}}</a>
 		  {% endfor %}
 		</nav>
 		{% endblock main %}

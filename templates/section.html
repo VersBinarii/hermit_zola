@@ -8,9 +8,7 @@
       </div>
       <nav class="site-nav hide-in-mobile">
         {% for menu_item in config.extra.hermit_menu %}
-        <a href="{{ config.base_url ~ menu_item.link }}"
-          >{{ menu_item.name }}</a
-        >
+        <a href="{{ menu_item.link }}">{{ menu_item.name }}</a>
         {% endfor %}
       </nav>
     </div>

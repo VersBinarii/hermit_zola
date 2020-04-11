@@ -52,6 +52,15 @@ enable = false
 id = "UA-4XXXXXXX-X"
 ```
 
+### Table of content
+Table of content can be enabled by adding 
+```
+[extra]
+toc=true
+```
+to the page front matter. Icon will then appear above the page title that will
+allow to toggle the ToC.
+
 ## License
 
 [MIT](LICENSE)

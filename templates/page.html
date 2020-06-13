@@ -10,7 +10,6 @@
         <a href="{{ config.base_url}}">{{ config.title }}</a>
       </div>
       <nav class="site-nav hide-in-mobile">
-            
         {% for menu_item in config.extra.hermit_menu %}
         <a href="{{ config.base_url ~ menu_item.link }}">{{ menu_item.name }}</a>
         {% endfor %}
@@ -21,18 +20,9 @@
         {{ macros::render_social_icons() }}
       </span>
       <button id="menu-btn" class="hdr-btn" title="Menu">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather feather-menu"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-menu">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -56,90 +46,118 @@
 {% block main %}
 <main class="site-main section-inner animated fadeIn faster">
   <article class="thin">
-	<header class="post-header">
-	  <div class="post-meta">
-		{% if page.date %}
-		<span>{{ page.date | date(format="%b %d, %Y")}}</span>
-		<small> - {{ macros::read_time(words=page.word_count) }}</small>
-		{% endif %}
-            {% if page.extra.toc %}
-            <button id="toc-btn" class="hdr-btn desktop-only-ib">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-                    class="feather feather-list">
-                    <line x1="8" y1="6" x2="21" y2="6"></line>
-                    <line x1="8" y1="12" x2="21" y2="12"></line>
-                    <line x1="8" y1="18" x2="21" y2="18"></line>
-                    <line x1="3" y1="6" x2="3" y2="6"></line>
-                    <line x1="3" y1="12" x2="3" y2="12"></line>
-                    <line x1="3" y1="18" x2="3" y2="18"></line>
-                </svg>
-            </button>
-		    {% endif %}
-	  </div>
-	  <h1>{{ page.title }}</h1>
-	</header>
+    <header class="post-header">
+      <div class="post-meta">
+        {% if page.date %}
+        <span>{{ page.date | date(format="%b %d, %Y")}}</span>
+        <small> - {{ macros::read_time(words=page.word_count) }}</small>
+        {% endif %}
+        {% if page.extra.toc %}
+        <button id="toc-btn" class="hdr-btn desktop-only-ib">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-list">
+            <line x1="8" y1="6" x2="21" y2="6"></line>
+            <line x1="8" y1="12" x2="21" y2="12"></line>
+            <line x1="8" y1="18" x2="21" y2="18"></line>
+            <line x1="3" y1="6" x2="3" y2="6"></line>
+            <line x1="3" y1="12" x2="3" y2="12"></line>
+            <line x1="3" y1="18" x2="3" y2="18"></line>
+          </svg>
+        </button>
+        {% endif %}
+      </div>
+      <h1>{{ page.title }}</h1>
+    </header>
 
-	<div class="content">
-        
-	  {{ page.content | safe }}
-	</div>
-	<hr class="post-end">
-	<footer class="post-info">
-	  <p>
-		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
-		{% for k, tags in page.taxonomies %}
-		{% for t in tags %}
-		<span class="tag"><a href="{{get_taxonomy_url(kind="tags", name=t)}}">{{t}}</a></span>
-		{% endfor %}
-		{% endfor %}
-	  </p>
-	  <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>{{ page.word_count}} Words</p>
-	  <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>{{ page.date }}</p>
-	</footer>
-  </article>
-    {% if page.extra.toc %}
-    <aside id="toc">
-        <div id="TableOfContents">
-            <div class="toc-title">Table of content</div>
-            <ul>
-                {% for h1 in page.toc %}
-                <li>
-                    <a href="{{h1.permalink | safe}}">{{ h1.title }}</a>
-                    {% if h1.children %}
-                    <ul>
-                        {% for h2 in h1.children %}
-                        <li>
-                            <a href="{{h2.permalink | safe}}">{{ h2.title }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </aside>
+    <div class="content">
+
+      {{ page.content | safe }}
+    </div>
+    {% if not page.extra.remove_post_info %}
+    <hr class="post-end">
+    <footer class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-tag meta-icon">
+          <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+          <line x1="7" y1="7" x2="7" y2="7"></line>
+        </svg>
+        {% for k, tags in page.taxonomies %}
+        {% for t in tags %}
+        <span class="tag"><a href="{{get_taxonomy_url(kind="tags", name=t)}}">{{t}}</a></span>
+        {% endfor %}
+        {% endfor %}
+      </p>
+      <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>{{ page.word_count}} Words</p>
+      <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>{{ page.date }}</p>
+    </footer>
     {% endif %}
-  
+  </article>
+  {% if page.extra.toc %}
+  <aside id="toc">
+    <div id="TableOfContents">
+      <div class="toc-title">Table of content</div>
+      <ul>
+        {% for h1 in page.toc %}
+        <li>
+          <a href="{{h1.permalink | safe}}">{{ h1.title }}</a>
+          {% if h1.children %}
+          <ul>
+            {% for h2 in h1.children %}
+            <li>
+              <a href="{{h2.permalink | safe}}">{{ h2.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </aside>
+  {% endif %}
+
   <div class="post-nav thin">
-	{% if page.later %}
-	<a class="next-post" href="{{ page.later.permalink }}">
-	  <span class="post-nav-label">
-		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
-		  <line x1="19" y1="12" x2="5" y2="12"></line>
-		  <polyline points="12 19 5 12 12 5"></polyline>
-		</svg>&nbsp;Newer</span><br>
-		<span>{{ page.later.title }}</span>
-	</a>
-	{% endif %}
-	{% if page.earlier %}
-	<a class="prev-post" href="{{ page.earlier.permalink }}">
-	  <span class="post-nav-label">Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br>
-	  <span>{{ page.earlier.title }}</span>
-	</a>
-	{% endif %}
+    {% if page.later %}
+    <a class="next-post" href="{{ page.later.permalink }}">
+      <span class="post-nav-label">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-arrow-left">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>&nbsp;Newer</span><br>
+      <span>{{ page.later.title }}</span>
+    </a>
+    {% endif %}
+    {% if page.earlier %}
+    <a class="prev-post" href="{{ page.earlier.permalink }}">
+      <span class="post-nav-label">Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" class="feather feather-arrow-right">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg></span><br>
+      <span>{{ page.earlier.title }}</span>
+    </a>
+    {% endif %}
   </div>
 </main>
 {% endblock main %}

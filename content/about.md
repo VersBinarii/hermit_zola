@@ -1,5 +1,8 @@
 +++
 title="About"
+
+[extra]
+remove_post_info=true
 +++
 
 

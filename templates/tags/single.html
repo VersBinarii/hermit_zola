@@ -57,7 +57,7 @@
         <a href="{{ page.permalink }}">
           <span class="post-title">{{ page.title }}</span>
           <span class="post-day"
-            >{{ page.month | date(format="%b") }} {{ page.day }}</span
+            >{{ page.date | date(format="%b %d") }}</span
           >
         </a>
       </li>

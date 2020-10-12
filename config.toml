@@ -69,7 +69,12 @@ extra_syntaxes = []
 # will be accessible in all templates
 [extra]
 
-home_subtitle = "Some profound and catchy statement"
+#home_subtitle = "Some profound and catchy statement"
+home_subtitle = [
+    "“Do not wait for the last judgment. It comes every day.”― Albert Camus thinking about JavaScript",
+    "boulou",
+    "billy"
+]
 
 footer_copyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 

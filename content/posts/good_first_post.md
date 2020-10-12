@@ -36,6 +36,10 @@ fn factorial(n: u64) -> u64 {
 }
 ```
 
+```typescript
+const sum = (n: number) =>  n * (n + 1) / 2
+```
+
 Then i shouted
 
 # Hello

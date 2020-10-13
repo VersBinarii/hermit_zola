@@ -104,6 +104,20 @@ enable = true
 clipboard = true
 ```
 
+#### Jupyter notebook
+
+You can display a jupyter notebook from a ipynb file. Only if you have enable highlightjs
+
+```toml
+highlight_code = false
+
+[extra.highlightjs]
+enable = true
+clipboard = true
+theme = "vs2015"
+notebook = true
+```
+
 ## License
 
 [MIT](LICENSE)

@@ -1,15 +1,10 @@
 +++
 title="This is a good first post"
 date=2019-08-23
-draft=false
-highlight_code = false
+draft=false]
+
 [taxonomies]
 tags=["hello", "blog", "first"]
-
-[extra]
-enable_highlightjs = true
-enable_highlightjs_clipboard = true
-highlightjs_theme = "vs2015"
 +++
 
 So i went there and did all that but as you know:

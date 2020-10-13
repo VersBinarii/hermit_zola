@@ -4,6 +4,8 @@
 
 > this is a port of the [Hermit theme](https://github.com/Track3/hermit) for [Zola](https://www.getzola.org/)
 
+> this is a fork of https://github.com/VersBinarii/hermit_zola
+
 Hermit is a  minimal & fast Zola theme for bloggers.
 
 ![screenshot](hermit_zola.png)
@@ -16,7 +18,7 @@ First download the theme to your `themes` directory:
 
 ```bash
 $ cd themes
-$ git clone https://github.com/VersBinarii/hermit_zola
+$ git clone https://github.com/pawndev/hermit_zola
 ```
 and then enable it in your `config.toml`:
 
@@ -61,8 +63,49 @@ toc=true
 to the page front matter. Icon will then appear above the page title that will
 allow to toggle the ToC.
 
+### Changes from the original
+
+#### highlightjs
+
+You can enable highlightjs to replace the built-in syntax high lighting.
+But, make sure to disable the built-in syntax highlighting.
+In your config.toml
+
+
+```toml
+highlight_code = false
+
+[extra]
+enable_highlightjs = true
+```
+
+You can change the highlightjs theme with this:
+
+```toml
+highlight_code = false
+
+[extra]
+enable_highlightjs = true
+highlightjs_theme = "vs2015"
+```
+
+For all themes, see: https://unpkg.com/browse/highlightjs-badge@0.1.9/highlightjs/styles/
+
+#### clipboard
+
+You can enable the display of a button to copy the content of a pre>code tag.
+The highlightjs must be enable in order to do this.
+
+```toml
+highlight_code = false
+[extra]
+enable_highlightjs = true
+enable_highlightjs_clipboard = true
+```
+
 ## License
 
 [MIT](LICENSE)
 
 Thanks to [Track3](https://github.com/Track3) for creating the original!
+Thanks to [VersBinarii](https://github.com/VersBinarii) for making the zola port !

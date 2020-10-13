@@ -21,6 +21,10 @@ hermit_social = [
     { name = "email", link = "mailto:name@domain.com" }
 ]
 
+enable_highlightjs = false
+enable_highlightjs_clipboard = false
+highlightjs_theme = "vs2015"
+
 [author]
 name = "VersBinarii"
 homepage = "https://versbinarii.gitlab.io/blog/"

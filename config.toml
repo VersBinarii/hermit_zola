@@ -11,14 +11,14 @@ default_language = "en"
 # theme = ""
 
 # Highlight all code blocks found
-highlight_code = true
+highlight_code = false
 
 # Which theme to use for the code highlighting.
 # See below for list of accepted values
-highlight_theme = "agola-dark"
+highlight_theme = "visual-studio-dark"
 
 # Whether to generate a RSS feed automatically
-generate_rss = true
+generate_feed = false
 
 # The number of articles to include in the RSS feed. Will include all items if
 # not set (the default).
@@ -68,13 +68,8 @@ extra_syntaxes = []
 # You can put any kind of data in there and it
 # will be accessible in all templates
 [extra]
-
 #home_subtitle = "Some profound and catchy statement"
-home_subtitle = [
-    "“Do not wait for the last judgment. It comes every day.”― Albert Camus thinking about JavaScript",
-    "boulou",
-    "billy"
-]
+home_subtitle = "“Do not wait for the last judgment. It comes every day.”― Albert Camus thinking about JavaScript"
 
 footer_copyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
@@ -88,6 +83,10 @@ hermit_social = [
     { name = "github", link = "https://github.com" },
     { name = "email", link = "mailto:author@domain.com" }
 ]
+
+enable_highlightjs = false
+enable_highlightjs_clipboard = false
+highlightjs_theme = "vs2015"
 
 [extra.author]
 name = "The Author"

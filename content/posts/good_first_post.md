@@ -2,6 +2,7 @@
 title="This is a good first post"
 date=2019-08-23
 draft=false
+
 [taxonomies]
 tags=["hello", "blog", "first"]
 +++

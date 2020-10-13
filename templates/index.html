@@ -35,7 +35,9 @@
 	<div id="spotlight" class="animated fadeIn">
 	  <div id="home-center">
 		<h1 id="home-title">{{config.title}}</h1>
-		<p id="home-subtitle">{{config.extra.home_subtitle}}</p>
+		<p id="home-subtitle">
+			{{config.extra.home_subtitle}}
+		</p>
 		<div id="home-social">
 		  {{macros::render_social_icons()}}
 		</div>
@@ -62,7 +64,29 @@
 	  </div>
 	  {% endblock footer %}
 	</div>
-	
+
+	{% if config.extra.enable_highlightjs %}
+		<link href="https://unpkg.com/highlightjs-badge/highlightjs/styles/{{config.extra.highlightjs_theme}}.css" rel="stylesheet">
+		<script src="https://unpkg.com/highlightjs-badge/highlightjs/highlight.pack.js"></script>
+		<script src="https://unpkg.com/highlightjs-badge/highlightjs-badge.min.js"></script>
+		<script>
+			var pres = document.querySelectorAll("pre>code");
+			for (var i = 0; i < pres.length; i++) {
+				hljs.highlightBlock(pres[i]);
+			}
+		</script>
+		{% if config.extra.enable_highlightjs_clipboard %}
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+			<script>
+				var options = {
+					copyIconClass: "gg-clipboard",
+					checkIconClass: "gg-check"
+				};
+				window.highlightJsBadge(options);
+			</script>
+		{% endif %}
+	{% endif %}
+
 	<script src="{{get_url(path="js/main.js")}}"></script>
 
 	<!-- Math rendering -->
@@ -70,7 +94,6 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
         onload="renderMathInElement(document.body, { delimiters: [ {left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}]});"></script>
-
     {% block js_footer %}
     {% endblock js_footer %}
 

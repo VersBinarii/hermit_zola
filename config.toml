@@ -84,9 +84,11 @@ hermit_social = [
     { name = "email", link = "mailto:author@domain.com" }
 ]
 
-enable_highlightjs = false
-enable_highlightjs_clipboard = false
-highlightjs_theme = "vs2015"
+[extra.highlightjs]
+enable = true
+clipboard = true
+theme = "vs2015"
+notebook = true
 
 [extra.author]
 name = "The Author"

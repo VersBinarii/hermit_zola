@@ -1,0 +1,87 @@
+/* notebook css from: https://github.com/jirutka/ipynb2html/blob/master/packages/ipynb2html/styles/notebook.css */
+/* Reference styles for ipynb2html */
+
+.nb-notebook {
+    line-height: 1.5;
+}
+
+.nb-cell + .nb-cell {
+    margin-top: 1.4rem;
+}
+
+.nb-raw-cell {
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.nb-code-cell {
+    position: relative;
+}
+
+.nb-source::before,
+.nb-output::before {
+    position: absolute;
+    font-family: monospace;
+    color: #999;
+    left: -7.5em;
+    width: 7em;
+    text-align: right;
+}
+
+.nb-source::before {
+    content: "In [" attr(data-execution-count) "]:";
+}
+.nb-output::before {
+    content: "Out[" attr(data-execution-count) "]:";
+}
+
+.nb-source + .nb-output,
+.nb-output + .nb-output {
+    margin-top: 1.4rem;
+}
+
+.nb-source > pre {
+//background-color: #f7f7f7;
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    padding: 0.5em;
+    margin: 0;
+    overflow-x: auto;
+}
+
+.nb-output {
+    min-height: 1em;
+    width: 100%;
+}
+
+.nb-output > pre {
+    padding: 0.5em;
+    margin: 0;
+    overflow-x: auto;
+}
+
+.nb-output > img {
+    max-width: 100%;
+}
+
+.nb-stdout,
+.nb-stderr {
+    white-space: pre-wrap;
+}
+
+.nb-error,
+.nb-stderr {
+    background-color: #fdd;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .nb-source::before,
+    .nb-output::before {
+        display: block;
+        position: relative;
+        left: 0;
+        padding-bottom: 0.5em;
+        text-align: left;
+    }
+}

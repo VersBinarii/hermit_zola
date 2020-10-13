@@ -21,15 +21,17 @@ hermit_social = [
     { name = "email", link = "mailto:name@domain.com" }
 ]
 
-enable_highlightjs = false
-enable_highlightjs_clipboard = false
-highlightjs_theme = "vs2015"
+[extra.highlightjs]
+enable = false
+clipboard = false
+theme = "vs2015"
 
 [author]
+name = "pawndev"
+homepage = "https://versbinarii.gitlab.io/blog/"
+repo = "https://github.com/pawndev/hermit_zola"
+
+[original]
 name = "VersBinarii"
 homepage = "https://versbinarii.gitlab.io/blog/"
 repo = "https://github.com/VersBinarii/hermit_zola"
-
-[original]
-author =  "Track3"
-repo = "https://github.com/Track3/hermit"

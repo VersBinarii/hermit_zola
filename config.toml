@@ -1,5 +1,5 @@
 # Base URL of the site, the only required config argument
-base_url = "https://example.com/blog"
+base_url = "https://pawndev-hermit-zola.netlify.app/"
 
 # Used in RSS by default
 title = "Hermit Zola"

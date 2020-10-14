@@ -16,8 +16,8 @@ For example:
 
 ```yaml
 ---
-images:
-  - https://picsum.photos/1024/768/?random
+[extra]
+featuredImg = "https://picsum.photos/1024/768/?random"
 ---
 ```
 

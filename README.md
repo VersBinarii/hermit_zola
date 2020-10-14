@@ -75,8 +75,8 @@ In your config.toml
 ```toml
 highlight_code = false
 
-[extra]
-enable_highlightjs = true
+[extra.highlightjs]
+enable = true
 ```
 
 You can change the highlightjs theme with this:
@@ -84,9 +84,9 @@ You can change the highlightjs theme with this:
 ```toml
 highlight_code = false
 
-[extra]
-enable_highlightjs = true
-highlightjs_theme = "vs2015"
+[extra.highlightjs]
+enable = false
+theme = "vs2015"
 ```
 
 For all themes, see: https://unpkg.com/browse/highlightjs-badge@0.1.9/highlightjs/styles/
@@ -98,9 +98,24 @@ The highlightjs must be enable in order to do this.
 
 ```toml
 highlight_code = false
-[extra]
-enable_highlightjs = true
-enable_highlightjs_clipboard = true
+
+[extra.highlightjs]
+enable = true
+clipboard = true
+```
+
+#### Jupyter notebook
+
+You can display a jupyter notebook from a ipynb file. Only if you have enable highlightjs
+
+```toml
+highlight_code = false
+
+[extra.highlightjs]
+enable = true
+clipboard = true
+theme = "vs2015"
+notebook = true
 ```
 
 ## License

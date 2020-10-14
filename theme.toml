@@ -25,6 +25,7 @@ hermit_social = [
 enable = false
 clipboard = false
 theme = "vs2015"
+notebook = false
 
 [author]
 name = "pawndev"

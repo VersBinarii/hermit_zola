@@ -54,6 +54,10 @@
 {% endblock title %}
 
 {% block main %}
+{% if page.extra.featuredImg %}
+<style>.bg-img {background-image: url('{{page.extra.featuredImg | safe}}');}</style>
+<div class="bg-img"></div>
+{% endif %}
 <main class="site-main section-inner animated fadeIn faster">
   <article class="thin">
 	<header class="post-header">

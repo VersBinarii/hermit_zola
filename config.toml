@@ -11,7 +11,7 @@ default_language = "en"
 # theme = ""
 
 # Highlight all code blocks found
-highlight_code = false
+highlight_code = true
 
 # Which theme to use for the code highlighting.
 # See below for list of accepted values
@@ -85,10 +85,10 @@ hermit_social = [
 ]
 
 [extra.highlightjs]
-enable = true
-clipboard = true
+enable = false
+clipboard = false
 theme = "vs2015"
-notebook = true
+notebook = false
 
 [extra.author]
 name = "The Author"

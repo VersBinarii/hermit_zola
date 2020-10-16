@@ -810,3 +810,18 @@ hr.post-end {
 .code-badge {
   margin: 0.4em 0em;
 }
+
+.highlight-copy-btn {
+  margin-right: 7px;
+  float: right;
+  border: 0;
+  border-radius: 4px;
+  padding: 1px;
+  font-size: .7em;
+  line-height: 1.8;
+  color: #fff;
+  background-color: #777;
+  opacity: .6;
+  min-width: 55px;
+  text-align: center;
+}

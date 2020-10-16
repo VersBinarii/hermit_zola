@@ -94,7 +94,22 @@ For all themes, see: https://unpkg.com/browse/highlightjs-badge@0.1.9/highlightj
 #### clipboard
 
 You can enable the display of a button to copy the content of a pre>code tag.
-The highlightjs must be enable in order to do this.
+
+##### Custom buttom
+
+This will display a "copy" button on the bottom of each pre tag.
+Only when highlightjs is disable.
+
+```toml
+highlight_code = true
+       
+[extra.highlightjs]
+enable = false
+```
+
+##### With highlightjs
+
+Enable it in the highlightjs config block.
 
 ```toml
 highlight_code = false

@@ -537,8 +537,12 @@ hr.post-end {
   }
 }
 
-.footnotes {
+.footnote-definition {
   font-size: 0.85em;
+
+  p {
+    display: inline;
+  }
 
   a {
     box-shadow: none;

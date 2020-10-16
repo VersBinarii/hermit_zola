@@ -136,6 +136,20 @@ featuredImg = "https://picsum.photos/1024/768/?random"
 +++
 ```
 
+#### Fix footnotes css
+
+In an article you can do footnotes like this:
+
+```markdown
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.[^1]
+
+> An apple is a sweet, edible fruit produced by an apple tree (Malus pumila). Apple trees are cultivated worldwide, and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today. Apples have been grown for thousands of years in Asia and Europe, and were brought to North America by European colonists. Apples have religious and mythological significance in many cultures, including Norse, Greek and European Christian traditions.[^2]
+
+[^1]: From [https://www.lipsum.com/](https://www.lipsum.com/)
+
+[^2]: From [https://en.wikipedia.org/wiki/Apple](https://en.wikipedia.org/wiki/Apple)
+```
+
 ## License
 
 [MIT](LICENSE)

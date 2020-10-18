@@ -151,6 +151,26 @@ featuredImg = "https://picsum.photos/1024/768/?random"
 +++
 ```
 
+#### Shortcodes
+
+##### Figure
+
+This theme provide a `figure` shortcode. You can use it like this:
+
+```
+{{ figure(src="https://via.placeholder.com/1600x800",
+          class="big"
+          caption_position="center",
+          caption="figure-big",
+          caption_style="font-style: italic;") }}
+```
+
+- src: The url of the image
+- class: Can be "big" | "left" | "right" (default to "") This define how to display the image
+- caption_position: Can be "center" | "left" | "right" (default to "center")
+- caption: string, describe the image
+- caption_style: Custome CSS style to apply to caption
+
 #### Fix footnotes css
 
 In an article you can do footnotes like this:

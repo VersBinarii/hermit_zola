@@ -169,7 +169,20 @@ This theme provide a `figure` shortcode. You can use it like this:
 - class: Can be "big" | "left" | "right" (default to "") This define how to display the image
 - caption_position: Can be "center" | "left" | "right" (default to "center")
 - caption: string, describe the image
-- caption_style: Custome CSS style to apply to caption
+- caption_style: Custom CSS style to apply to caption
+
+##### image
+
+This theme provide a `image` shortcode. You can use it like this:
+
+```
+{{ image(src="https://via.placeholder.com/1600x800", class="boulou" alt="Hello Friend", style="border-radius: 8px;") }}
+```
+
+- src: The url of the image
+- class: You can apply class to the current img
+- alt: The alt of the image
+- style: Custom CSS style to apply on the img element
 
 #### Fix footnotes css
 

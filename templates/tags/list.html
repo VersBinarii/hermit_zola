@@ -49,10 +49,10 @@
   {% for letter in tags %}
   <div class="posts-group">
     <div class="post-year">{{ letter | upper }}</div>
-    <ul class="posts-list">
+    <ul class="posts-list pt-8">
       {% for tag in terms %}
         {% if tag.name is starting_with(letter) %}
-          <li class="post-item pt-8">
+          <li class="post-item">
             <a href="/tags/{{ tag.slug }}">
               <span class="post-title">{{ tag.name }}</span>
               <span class="post-day">

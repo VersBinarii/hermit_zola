@@ -37,18 +37,35 @@
 </div>
 {% endblock header %} {% block title %} {% endblock title %} {% block main %}
 
-<main class="site-main section-inner thin animated fadeIn faster" style="text-align: center;">
+<main class="site-main section-inner thin animated fadeIn faster">
+  <h1 class="post-header__title">{{ trans(key="tags") }}</h1>
   {% block content %}
-  {% for tag in terms %}
-  <header class="post-header">
-    <h1 class="post-header__title"><a href="/tags/{{ tag.slug }}">{{ tag.name }}</a></h1>
-    <p class="post-header__info">
-      {{ tag.pages | length }} post{{ tag.pages | length | pluralize }}
-    </p>
-  </header>
+  {% set all_tags= terms | sort(attribute="name") | map(attribute="name") %}
+  {% set_global tags = [] %}
+  {% for tag in all_tags %}
+    {% set tag_first_letter = tag | truncate(length=1, end="") %}
+    {% set_global tags = tags | concat(with=tag_first_letter) %}
+  {% endfor %}
+  {% for letter in tags %}
+  <div class="posts-group">
+    <div class="post-year">{{ letter | upper }}</div>
+    <ul class="posts-list">
+      {% for tag in terms %}
+        {% if tag.name is starting_with(letter) %}
+          <li class="post-item pt-8">
+            <a href="/tags/{{ tag.slug }}">
+              <span class="post-title">{{ tag.name }}</span>
+              <span class="post-day">
+                {{ tag.pages | length }} post{{ tag.pages | length | pluralize }}
+              </span>
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
   {% endfor %}
   {% endblock content %}
 </main>
 
-{% endblock main %} {% block footer %} {{ macros::footer() }} {% endblock footer
-%}
+{% endblock main %} {% block footer %} {{ macros::footer() }} {% endblock footer %}

@@ -67,7 +67,7 @@ extra_syntaxes = []
 [translations.fr]
 tags = "Catégories"
 [translations.en]
-tags = "Categories"
+tags = "Tags"
 
 # You can put any kind of data in there and it
 # will be accessible in all templates

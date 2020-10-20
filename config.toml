@@ -64,6 +64,10 @@ extra_syntaxes = []
 
 # Optional translation object. The key if present should be a language code
 [translations]
+[translations.fr]
+tags = "Catégories"
+[translations.en]
+tags = "Tags"
 
 # You can put any kind of data in there and it
 # will be accessible in all templates

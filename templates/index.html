@@ -19,6 +19,11 @@
     rel="shortcut icon"
     href="{{get_url(path="favicon.ico")}}"
   />
+  {% if config.extra.accent_color %}
+  <link rel="stylesheet" href="{{get_url(path="colors/" ~ config.extra.accent_color ~ ".css", cachebust=true)}}"/>
+  {% else %}
+  <link rel="stylesheet" href="{{get_url(path="colors/grey.css", cachebust=true)}}"/>
+  {% endif %}
   <link rel="stylesheet" href="{{get_url(path="style.css", cachebust=true)}}"/>
   <title>{{config.title}}</title>
 

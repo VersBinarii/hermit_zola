@@ -9,19 +9,19 @@
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
-  background: $midnightblue;
+  background: var(--midnight-blue);
 }
 
 ::-webkit-scrollbar-thumb {
   background: #888;
 
   &:hover {
-    background: $text;
+    background: var(--text);
   }
 }
 
 html {
-  background: $light-grey;
+  background: var(--light-grey);
   line-height: 1.6;
   letter-spacing: 0.06em;
 }
@@ -31,7 +31,7 @@ button,
 input,
 select,
 textarea {
-  color: $text;
+  color: var(--text);
   font-family: $fonts;
 }
 
@@ -52,20 +52,20 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
   color: #eee;
-  //background: $midnightblue;
+  //background: var(--midnight-blue);
   border-radius: 4px;
   // -webkit-overflow-scrolling: touch;
 
   code {
     padding: 0;
     margin: 0;
-    //background: $midnightblue;
+    //background: var(--midnight-blue);
   }
 }
 
 code {
   color: #eee;
-  //background: $highlight-grey;
+  //background: var(--highlight-grey);
   border-radius: 3px;
   padding: 0 3px;
   margin: 0 4px;
@@ -90,7 +90,7 @@ blockquote {
 }
 
 a {
-  color: $text;
+  color: var(--text);
   text-decoration: none;
   border: none;
   transition-property: color;
@@ -198,7 +198,7 @@ table {
   width: 100%;
   box-sizing: border-box;
   box-shadow: -1px -2px 3px rgba(0, 0, 0, 0.45);
-  background-color: $dark-grey;
+  background-color: var(--dark-grey);
 }
 
 .hdr-wrapper {
@@ -261,7 +261,7 @@ table {
   z-index: 1;
   box-sizing: border-box;
   box-shadow: -1px -2px 3px 0px rgba(0, 0, 0, 0.45);
-  background-color: $dark-grey;
+  background-color: var(--dark-grey);
 
   ul {
     list-style: none;
@@ -329,7 +329,7 @@ p.img-404 {
 
     a {
       display: inline-block;
-      border: 2px solid $text;
+      border: 2px solid var(--text);
       border-radius: 5px;
       padding: 5px;
       transition-property: color, border-color;
@@ -425,7 +425,7 @@ p.img-404 {
   }
 
   .post-item {
-    border-bottom: 1px $highlight-grey dashed;
+    border-bottom: 1px var(--highlight-grey) dashed;
 
     a {
       display: flex;
@@ -581,7 +581,7 @@ hr.post-end {
   text-decoration: none;
   padding: 2px;
   border-radius: 2px;
-  background-color: $midnightblue;
+  background-color: var(--midnight-blue);
 }
 
 .post-info {
@@ -594,7 +594,7 @@ hr.post-end {
   }
 
   a:hover {
-    border-bottom: 1px solid $theme;
+    border-bottom: 1px solid var(--theme);
   }
 
   svg {
@@ -642,7 +642,7 @@ hr.post-end {
   }
 
   a:hover {
-    border-bottom: $theme 1px solid;
+    border-bottom: var(--theme) 1px solid;
   }
 }
 
@@ -833,7 +833,7 @@ hr.post-end {
   font-size: .7em;
   line-height: 1.8;
   color: #fff;
-  background-color: #777;
+  background-color: #4e4949;
   opacity: .6;
   min-width: 55px;
   text-align: center;

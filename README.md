@@ -198,6 +198,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 [^2]: From [https://en.wikipedia.org/wiki/Apple](https://en.wikipedia.org/wiki/Apple)
 ```
 
+#### Themes
+
+You can switch to a darker theme by setting de `extra.accent_color` variable.
+There is 2 themes actually:
+
+```toml
+[extra]
+accent_color = "dark" # Or "grey", which is the default value
+```
+
 ## License
 
 [MIT](LICENSE)

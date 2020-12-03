@@ -79,6 +79,7 @@ footer_copyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/
 
 hermit_menu = [
     { link = "/posts", name = "Posts" },
+    { link = "/tags",  name = "Tags" },
     { link = "/about", name = "About" }
 ]
 
@@ -87,6 +88,8 @@ hermit_social = [
     { name = "github", link = "https://github.com" },
     { name = "email", link = "mailto:author@domain.com" }
 ]
+
+accent_color = "dark"
 
 [extra.highlightjs]
 enable = false

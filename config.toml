@@ -62,6 +62,10 @@ ignored_content = []
 # A list of directories to search for additional `.sublime-syntax` files in.
 extra_syntaxes = []
 
+# When set to "true", emoji aliases translated to their corresponding
+# Unicode emoji equivalent in the rendered Markdown files. (e.g.: :smile: => 😄)
+emoji_rendering = false
+
 # Optional translation object. The key if present should be a language code
 [translations]
 [translations.fr]

@@ -10,13 +10,6 @@ default_language = "en"
 # Theme name to use
 # theme = ""
 
-# Highlight all code blocks found
-highlight_code = true
-
-# Which theme to use for the code highlighting.
-# See below for list of accepted values
-highlight_theme = "visual-studio-dark"
-
 # Whether to generate a RSS feed automatically
 generate_feed = false
 
@@ -62,9 +55,30 @@ ignored_content = []
 # A list of directories to search for additional `.sublime-syntax` files in.
 extra_syntaxes = []
 
+[markdown]
+# Highlight all code blocks found
+highlight_code = true
+
+# Which theme to use for the code highlighting.
+# See below for list of accepted values
+highlight_theme = "visual-studio-dark"
 # When set to "true", emoji aliases translated to their corresponding
 # Unicode emoji equivalent in the rendered Markdown files. (e.g.: :smile: => 😄)
-emoji_rendering = false
+render_emoji = true
+
+# Whether external links are to be opened in a new tab
+# If this is true, a `rel="noopener"` will always automatically be added for security reasons
+external_links_target_blank = false
+
+# Whether to set rel="nofollow" for all external links
+external_links_no_follow = false
+
+# Whether to set rel="noreferrer" for all external links
+external_links_no_referrer = false
+
+# Whether smart punctuation is enabled (changing quotes, dashes, dots in their typographic form)
+# For example, `...` into `…`, `"quote"` into `“curly”` etc
+smart_punctuation = false
 
 # Optional translation object. The key if present should be a language code
 [translations]
@@ -82,9 +96,9 @@ home_subtitle = "If brute force doesn’t solve your problems, then you aren’t
 footer_copyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
 hermit_menu = [
-    { link = "/posts", name = "Posts" },
-    { link = "/tags",  name = "Tags" },
-    { link = "/about", name = "About" }
+    { link = "posts", name = "Posts" },
+    { link = "tags",  name = "Tags" },
+    { link = "about", name = "About" }
 ]
 
 hermit_social = [
@@ -93,7 +107,7 @@ hermit_social = [
     { name = "email", link = "mailto:author@domain.com" }
 ]
 
-accent_color = "dark"
+accent_color = "grey"
 
 [extra.highlightjs]
 enable = false

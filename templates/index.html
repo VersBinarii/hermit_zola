@@ -71,6 +71,35 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
         onload="renderMathInElement(document.body, { delimiters: [ {left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}, {left: '\\[', right: '\\]', display: true}, {left: '\\(', right: '\\)', display: false}]});"></script>
 
+    {% if config.extra.highlightjs.enable %}
+		<link href="https://unpkg.com/highlightjs-badge/highlightjs/styles/{{config.extra.highlightjs.theme}}.css" rel="stylesheet">
+		<!-- https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/  for min version -->
+		<script src="https://unpkg.com/highlightjs-badge/highlightjs/highlight.pack.js"></script>
+		<script src="https://unpkg.com/highlightjs-badge/highlightjs-badge.min.js"></script>
+		<script>
+			var pres = document.querySelectorAll("pre>code");
+			for (var i = 0; i < pres.length; i++) {
+				hljs.highlightBlock(pres[i]);
+			}
+		</script>
+		{% if config.extra.highlightjs.clipboard %}
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+			<script>
+				var options = {
+					copyIconClass: "gg-clipboard",
+					checkIconClass: "gg-check"
+				};
+				window.highlightJsBadge(options);
+			</script>
+		{% endif %}
+
+	{% endif %}
+
+	{% if not config.extra.highlightjs.enable %}
+	<script src="{{get_url(path="js/copy.js", cachebust=true)}}"></script>
+	{% endif %}
+	<script src="{{get_url(path="js/main.js", cachebust=true)}}"></script>
+
     {% block js_footer %}
     {% endblock js_footer %}
 

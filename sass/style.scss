@@ -1,7 +1,8 @@
-@import 'predefined.scss';
-@import 'normalize.scss';
-@import 'syntax.scss';
-@import 'animate.scss';
+@import "predefined.scss";
+@import "normalize.scss";
+@import "syntax.scss";
+@import "animate.scss";
+@import "icons.scss";
 
 /* Webkit Scrollbar Customize */
 ::-webkit-scrollbar {
@@ -81,7 +82,7 @@ blockquote {
     font-style: normal;
 
     &::before {
-      content: '—— ';
+      content: "—— ";
     }
   }
 }
@@ -586,7 +587,7 @@ hr.post-end {
     margin-right: 0.5em;
 
     &::before {
-      content: '#';
+      content: "#";
     }
   }
 }
@@ -799,4 +800,23 @@ hr.post-end {
   #mobile-menu {
     right: 1.2em;
   }
+}
+
+.code-badge {
+  margin: 0.4em 0em;
+}
+
+.highlight-copy-btn {
+  margin-right: 7px;
+  float: right;
+  border: 0;
+  border-radius: 4px;
+  padding: 1px;
+  font-size: 0.7em;
+  line-height: 1.8;
+  color: #fff;
+  background-color: #777;
+  opacity: 0.6;
+  min-width: 55px;
+  text-align: center;
 }

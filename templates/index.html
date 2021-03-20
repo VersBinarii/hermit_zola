@@ -22,6 +22,10 @@
   <link rel="stylesheet" href="{{get_url(path="style.css")}}"/>
   <title>{{config.title}}</title>
 
+  {% if config.generate_feed %}
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path=config.feed_filename, trailing_slash=false) }}">
+  {% endif %}
+
   <body id="page">
 
 	{% block header %}

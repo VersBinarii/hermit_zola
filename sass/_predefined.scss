@@ -3,19 +3,24 @@
 $theme: #018574;
 $text: #c6cddb;
 $light-grey: #494f5c;
-$dark-grey: #3B3E48;
+$dark-grey: #3b3e48;
 $highlight-grey: #7d828a;
-$midnightblue: #2c3e50;
+$midnightblue: #31333d;
 
 // Fonts
 //
-$fonts: "Trebuchet MS", Verdana, "Verdana Ref", "Segoe UI", Candara, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-$code-fonts: Consolas, "Andale Mono WT", "Andale Mono", Menlo, Monaco, "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, "YaHei Consolas Hybrid", monospace, "Segoe UI Emoji", "PingFang SC", "Microsoft YaHei";
+$fonts: "Trebuchet MS", Verdana, "Verdana Ref", "Segoe UI", Candara,
+  "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+$code-fonts: Consolas, "Andale Mono WT", "Andale Mono", Menlo, Monaco,
+  "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+  "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New",
+  Courier, "YaHei Consolas Hybrid", monospace, "Segoe UI Emoji", "PingFang SC",
+  "Microsoft YaHei";
 
 // Mixins
 //
 @mixin dimmed {
-  opacity: .6;
+  opacity: 0.6;
 }
 
 @mixin aTag {

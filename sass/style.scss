@@ -98,6 +98,10 @@ a {
   &:hover {
     color: #fff;
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 hr {

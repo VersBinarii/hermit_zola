@@ -50,6 +50,11 @@ enable = true
 clipboard = true
 theme = "vs2015"
 
+[extra.disqus]
+enable = false
+# Take this from your Disqus account
+shortname = "my-supa-dupa-blog"
+
 [extra.author]
 name = "The Author"
 email = "author@domain.com"

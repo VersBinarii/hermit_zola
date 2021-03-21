@@ -92,7 +92,7 @@ hermit_social = [
 [extra.highlightjs]
 enable = true
 clipboard = true
-theme = "vs2015"
+theme = "railscasts"
 
 [extra.author]
 name = "The Author"

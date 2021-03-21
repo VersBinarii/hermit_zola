@@ -540,7 +540,7 @@ hr.post-end {
   }
 }
 
-.footnotes {
+.footnote-definition {
   font-size: 0.85em;
 
   a {
@@ -559,6 +559,9 @@ hr.post-end {
 
   ol {
     line-height: 1.8;
+  }
+  p {
+    display: inline;
   }
 }
 

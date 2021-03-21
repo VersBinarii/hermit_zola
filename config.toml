@@ -11,6 +11,7 @@ default_language = "en"
 # theme = ""
 
 # Highlight all code blocks found
+# Or enable the highlight.js in the 'extra' config section
 highlight_code = false
 
 # Which theme to use for the code highlighting.
@@ -85,6 +86,9 @@ hermit_social = [
     { name = "email", link = "mailto:author@domain.com" }
 ]
 
+
+# You can use highlight.js for code highlighting if you dont like the 
+# default one
 [extra.highlightjs]
 enable = true
 clipboard = true

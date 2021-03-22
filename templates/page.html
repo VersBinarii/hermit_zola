@@ -160,7 +160,7 @@
                 this.page.identifier = "{{ page.permalink }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
             var d = document, s = d.createElement('script');
-            s.src = 'https://{{config.extra.disqus.id}}.disqus.com/embed.js';
+            s.src = 'https://{{config.extra.disqus.shortname}}.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
             (d.head || d.body).appendChild(s);
         })();

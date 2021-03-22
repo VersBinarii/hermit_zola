@@ -146,8 +146,7 @@
 	{% endif %}
   </div>
 
-
-  {% if config.extra.disqus.enable %}
+  {% if config.extra.disqus.enable  and not page.extra.disable_comments%}
     <div id="disqus_thread" class="thin"></div>
     <script>
         /**

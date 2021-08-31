@@ -38,15 +38,6 @@ taxonomies = [
            {name = "tags", rss = true}
 ]
 
-# The additional languages for that site
-# Example:
-#     languages = [
-#       {code = "fr", rss = true}, # there will be a RSS feed for French content
-#       {code = "it"}, # there won't be a RSS feed for Italian content
-#     ]
-#
-languages = []
-
 # Whether to compile the Sass files found in the `sass` directory
 compile_sass = true
 

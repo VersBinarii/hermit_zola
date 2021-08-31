@@ -41,7 +41,7 @@
   {% block content %}
   {% for tag in terms %}
   <header class="post-header">
-    <h1 class="post-header__title"><a href="/tags/{{ tag.slug }}">{{ tag.name }}</a></h1>
+      <h1 class="post-header__title"><a href="{{ config.base_url }}/tags/{{ tag.slug }}">{{ tag.name }}</a></h1>
     <p class="post-header__info">
       {{ tag.pages | length }} post{{ tag.pages | length | pluralize }}
     </p>

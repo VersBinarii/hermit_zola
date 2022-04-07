@@ -6,7 +6,7 @@
 
 Hermit is a  minimal & fast Zola theme for bloggers.
 
-![screenshot](hermit_zola.png)
+![screenshot](screenshot.png)
 
 [View demo](https://versbinarii.gitlab.io/blog/)
 

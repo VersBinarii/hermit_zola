@@ -51,7 +51,7 @@
 {% endblock header %} {% block title %} {% endblock title %} {% block main %}
 
 <main class="site-main section-inner thin animated fadeIn faster">
-  <h1>Posts</h1>
+  <h1>{% section.title %}</h1>
   {% for year, pages in section.pages | group_by(attribute="year") %}
   <div class="posts-group">
     <div class="post-year">{{ year }}</div>

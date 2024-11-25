@@ -89,7 +89,7 @@ theme = "railscasts"
 enable = false
 # Take this from your Disqus account
 shortname = "my-supa-dupa-blog"
-# Cpmments can be disabled per page by setting:
+# Comments can be disabled per page by setting:
 # [extra]
 # disable_comments = true
 #

@@ -85,6 +85,9 @@ enable = true
 clipboard = true
 theme = "railscasts"
 
+[extra.footer]
+index = true
+
 [extra.disqus]
 enable = false
 # Take this from your Disqus account

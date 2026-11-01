@@ -10,17 +10,9 @@ default_language = "en"
 # Theme name to use
 # theme = ""
 
-# Highlight all code blocks found
-# Or enable the highlight.js in the 'extra' config section
-highlight_code = false
-
-# Which theme to use for the code highlighting.
-# See below for list of accepted values
-highlight_theme = "agola-dark"
-
 # Whether to generate a RSS feed automatically
-generate_feed = true
-feed_filename = "rss.xml"
+generate_feeds = true
+feed_filenames = ["rss.xml"]
 
 # The number of articles to include in the RSS feed. Will include all items if
 # not set (the default).
@@ -53,7 +45,16 @@ build_search_index = false
 ignored_content = []
 
 # A list of directories to search for additional `.sublime-syntax` files in.
-extra_syntaxes = []
+#extra_syntaxes = []
+
+[markdown.highlighting]
+# Highlight all code blocks found
+# Or enable the highlight.js in the 'extra' config section
+style = "inline"
+
+# Which theme to use for the code highlighting.
+# See below for list of accepted values
+theme = "one-dark-pro"
 
 # Optional translation object. The key if present should be a language code
 [translations]

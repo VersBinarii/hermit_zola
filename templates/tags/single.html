@@ -1,4 +1,4 @@
-{% extends "index.html" %} {% import "macros.html" as macros %} {% block header
+{% extends "index.html" %} {% block header
 %}
 <header id="site-header" class="animated slideInUp faster">
   <div class="hdr-wrapper section-inner">
@@ -14,7 +14,7 @@
     </div>
     <div class="hdr-right hdr-icons">
       <span class="hdr-social hide-in-mobile">
-        {{ macros::render_social_icons() }}
+        {{ <hermit.render_social_icons config={config} /> }}
       </span>
       <button id="menu-btn" class="hdr-btn" title="Menu">
         <svg
@@ -67,5 +67,5 @@
   {% endfor %}
 </main>
 
-{% endblock main %} {% block footer %} {{ macros::footer() }} {% endblock footer
+{% endblock main %} {% block footer %} {{ <hermit.footer config={config} /> }} {% endblock footer
 %}

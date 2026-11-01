@@ -1,4 +1,4 @@
-{% macro read_time(words) %}
+{% component hermit.read_time(words) %}
 <span class="reading-time" title="Estimated read time">
   {% if words < 530 %}
   1 min read
@@ -6,10 +6,9 @@
   {{ words / 265 | round }} min read
   {% endif %}
 </span>
-{% endmacro read_time %}
+{% endcomponent hermit.read_time %}
 
-{% macro footer() %}
-
+{% component hermit.footer(config) %}
 <footer id="site-footer" class="section-inner thin animated fadeIn faster">
   <p>&copy; {{ now() | date(format="%Y") }} <a href="{{ config.base_url }}">{{ config.extra.author.name }}</a>{{ config.extra.footer_copyright | safe }}</p>
   <p>Made with <a href="https://www.getzola.org" target="_blank" rel="noopener">Zola</a> &#183; Theme <a href="https://github.com/VersBinarii/hermit_zola" target="_blank" rel="noopener">Hermit_Zola</a>
@@ -18,12 +17,9 @@
 	{% endif %}
   </p>
 </footer>
+{% endcomponent hermit.footer %}
 
-{% endmacro footer %}
-
-
-
-{% macro render_social_icons() %}
+{% component hermit.render_social_icons(config) %}
 {% for icon in config.extra.hermit_social %}
 <a href="{{ icon.link }}" target="_blank" rel="noopener me"
    title="{{ icon.name }}">
@@ -84,4 +80,4 @@
   {% endif %}
 </a>
 {% endfor %}
-{% endmacro render_social_icons %}
+{% endcomponent hermit.render_social_icons %}

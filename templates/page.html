@@ -1,7 +1,5 @@
 {% extends "index.html" %}
 
-{% import "macros.html" as macros %}
-
 {% block header %}
 <header id="site-header" class="animated slideInUp faster">
   <div class="hdr-wrapper section-inner">
@@ -18,7 +16,7 @@
     </div>
     <div class="hdr-right hdr-icons">
       <span class="hdr-social hide-in-mobile">
-        {{ macros::render_social_icons() }}
+        {{ <hermit.render_social_icons config={config} /> }}
       </span>
       <button id="menu-btn" class="hdr-btn" title="Menu">
         <svg
@@ -60,7 +58,7 @@
 	  <div class="post-meta">
 		{% if page.date %}
 		<span>{{ page.date | date(format="%b %d, %Y")}}</span>
-		<small> - {{ macros::read_time(words=page.word_count) }}</small>
+		<small> - {{ <hermit.read_time words={page.word_count} /> }}</small>
 		{% endif %}
             {% if page.extra.toc %}
             <button id="toc-btn" class="hdr-btn desktop-only-ib">
@@ -171,6 +169,6 @@
 
 {% block footer %}
 
-{{ macros::footer() }}
+{{ <hermit.footer config={config} /> }}
 
 {% endblock footer %}

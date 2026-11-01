@@ -1,4 +1,4 @@
-{% extends "index.html" %} {% import "macros.html" as macros %} {% block header
+{% extends "index.html" %} {% block header
 %}
 <header id="site-header" class="animated slideInUp faster">
   <div class="hdr-wrapper section-inner">
@@ -16,7 +16,7 @@
     </div>
     <div class="hdr-right hdr-icons">
       <span class="hdr-social hide-in-mobile">
-        {{ macros::render_social_icons() }}
+        {{ <hermit.render_social_icons config={config} /> }}
       </span>
       <button id="menu-btn" class="hdr-btn" title="Menu">
         <svg
@@ -52,11 +52,19 @@
 
 <main class="site-main section-inner thin animated fadeIn faster">
   <h1>{{ section.title }}</h1>
-  {% for year, pages in section.pages | group_by(attribute="year") %}
+  {% set posts_by_year = section.pages | group_by(attribute="year") %}
+  {% set_global years = [] %}
+
+  {% for year, ignored in posts_by_year %}
+    {% set_global years = [...years, year] %}
+  {% endfor %}
+
+  {% for year in years | reverse %}
+    {% set pages = posts_by_year[year] %}
   <div class="posts-group">
     <div class="post-year">{{ year }}</div>
     <ul class="posts-list">
-      {% for page in pages %}
+      {% for page in pages | sort(attribute="date") | reverse %}
       <li class="post-item">
         <a href="{{ page.permalink }}">
           <span class="post-title">{{ page.title }}</span>
@@ -69,5 +77,5 @@
   {% endfor %}
 </main>
 
-{% endblock main %} {% block footer %} {{ macros::footer() }} {% endblock footer
+{% endblock main %} {% block footer %} {{ <hermit.footer config={config} /> }} {% endblock footer
 %}
